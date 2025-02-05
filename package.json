@@ -1,0 +1,46 @@
+{
+  "name": "sanatorio",
+  "version": "1.5.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "packager": "electron-packager . SanatorioApp --platform=win32 --arch=x64 --out=dist",
+    "build-win": "electron-builder build --win",
+    "build-linux": "electron-builder build --linux"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Bruno Barbara De Leoni"
+  },
+  "license": "ISC",
+  "description": "Acceso x Sanatorio Privado",
+  "devDependencies": {
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.sanatorio.brunoapp",
+    "productName": "Sanatorio Privado",
+    "copyright": "© 2024 Bruno Barbara De Leoni",
+    "win": {
+      "target": "msi",
+      "icon": "./icono.ico"
+    },
+    "linux": {
+      "icon": "./icono.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": true,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "./icono.ico",
+      "uninstallerIcon": "./icono.ico",
+      "installerHeaderIcon": "./icono.ico",
+      "shortcutName": "Sanatorio Privado"
+    }
+  },
+  "dependencies": {
+    "electron-updater": "^6.3.9"
+  }
+}
